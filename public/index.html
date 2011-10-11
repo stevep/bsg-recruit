@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>BSG: Recruit</title>
+    
+    <link rel="stylesheet" href="css/app.css" media="screen, projection">
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/backbone.js"></script>
+    <script src="characters.js"></script>
+    <script src="js/app.js"></script>
+
+    <script type="text/template" id="album-template">
+      <span class="album-title"><%= title %></span>
+      <span class="artist-name"><%= artist %></span>
+      <ol class="tracks">
+        <% _.each(tracks, function(track) { %>
+          <li><%= track.title %></li>
+        <% }); %>
+      </ol>
+    </script>
+
+  </head>
+
+  <body>
+    <h1><img src="images/logo.png" alt="Battle Star Galactic" id="logo"><strong>REcrUit</strong></h1>
+    
+    <section id="stats">
+     
+     <ul id="skills">
+       <li class="politics"><div style="height:200px;"><label>Politics</label><span>5</span></div></li>
+       <li class="leadership"><div style="height:160px;"><label>Leadership</label><span>4</span></div></li>
+       <li class="tactics"><div style="height:120px;"><label>Tactics</label><span>3</span></div></li>
+       <li class="piloting"><div style="height:160px;"><label>Piloting</label><span>4</span></div></li>
+       <li class="engineering"><div style="height:80px;"><label>Engineering</label><span>2</span></div></li>
+     </ul>
+     
+      <div id="president" >
+        <h3>President</h3>
+        <div class="crew">
+          
+        </div>
+      </div>
+      <div id="admiral">
+        <h3>Admiral</h3>
+        <div class="crew">
+          
+        </div>
+      </div>
+ 
+    </section>
+    
+    <section id="crew">
+      <h2>Crew Members</h2>
+      
+      <div id="members">
+      </div>
+    </section>
+    
+    <script type="text/template" id="crew-member-template">
+        <li><select name="crew-member-<%= slot %>">
+          <option value="">Choose a Character</option>
+          <% _.each(characters, function(c){ %><option value="<%= c.id %>"><%= c.name %></option><% }); %>
+        </select></li>
+    </script>
+    
+    <script type="text/template" id="crew-order-template">
+        <li><%= member.get("name") %></li>
+    </script>
+    
+  </body>
+</html>

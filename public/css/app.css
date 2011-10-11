@@ -1,0 +1,150 @@
+@font-face {
+  font-family: battlestar;
+  src: url(../fonts/battlestar.ttf) format("truetype"); }
+
+html {
+  background: url("../images/star-texture.jpg");
+  -webkit-animation-name: STAR-MOVE;
+  -webkit-animation-duration: 200s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite; }
+
+body {
+  width: 800px;
+  margin: 20px auto;
+  color: #aaaaaa;
+  font-family: sans-serif; }
+
+h1 {
+  padding: 10px 0 0;
+  margin: 0 auto;
+  font-size: 50px;
+  font-family: battlestar;
+  color: #aaaaaa;
+  text-align: center;
+  line-height: 70px;
+  width: 450px;
+  position: relative; }
+  h1 strong {
+    color: #cacbc3;
+    text-shadow: 0em 0em 0.09em red; }
+  h1 #logo {
+    width: 450px; }
+
+h2 {
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #aaaaaa;
+  width: 48%; }
+
+#stats {
+  overflow: hidden;
+  position: relative; }
+  #stats .crew {
+    height: 144px; }
+  #stats ol {
+    line-height: 1.5em; }
+    #stats ol li:first-of-type {
+      font-weight: bold;
+      color: white;
+      text-shadow: 0em 0em 0.5em white; }
+  #stats h3 {
+    font-weight: bold;
+    border-bottom: 1px solid #aaaaaa;
+    width: 200px;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px; }
+
+#skills {
+  float: right;
+  list-style: none;
+  position: absolute;
+  width: 490px;
+  bottom: 0;
+  right: 0; }
+  #skills li {
+    float: left;
+    margin-left: 20px;
+    width: 80px;
+    text-align: center;
+    position: relative;
+    height: 340px; }
+    #skills li div {
+      background: #cccccc;
+      position: absolute;
+      bottom: 4px;
+      width: 80px;
+      border: 1px solid #aaaaaa; }
+    #skills li label {
+      position: absolute;
+      bottom: -20px;
+      display: block;
+      width: 120px;
+      left: -20px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: capitalize; }
+    #skills li span {
+      margin-top: -35px;
+      display: block;
+      font-size: 24px; }
+  #skills li:first-child {
+    margin-left: 0; }
+  #skills .politics {
+    color: rgba(255, 255, 130, 0.9); }
+    #skills .politics div {
+      background-color: rgba(196, 183, 87, 0.9);
+      border-color: rgba(255, 255, 130, 0.9); }
+  #skills .leadership {
+    color: rgba(0, 240, 139, 0.9); }
+    #skills .leadership div {
+      background-color: rgba(0, 160, 93, 0.9);
+      border-color: rgba(0, 240, 139, 0.9); }
+  #skills .tactics {
+    color: rgba(156, 102, 192, 0.9); }
+    #skills .tactics div {
+      background: rgba(104, 68, 128, 0.9);
+      border-color: rgba(156, 102, 192, 0.9); }
+  #skills .piloting {
+    color: rgba(255, 109, 105, 0.9); }
+    #skills .piloting div {
+      background: rgba(220, 73, 70, 0.9);
+      border-color: rgba(255, 109, 105, 0.9); }
+  #skills .engineering {
+    color: rgba(37, 183, 255, 0.9); }
+    #skills .engineering div {
+      background: rgba(25, 122, 170, 0.9);
+      border-color: rgba(37, 183, 255, 0.9); }
+
+#members {
+  text-align: center;
+  margin-top: 20px; }
+  #members select {
+    font-size: 24px; }
+  #members ul {
+    list-style: none; }
+    #members ul li {
+      display: inline; }
+  #members div {
+    width: 48%;
+    clear: both;
+    float: left;
+    margin: 0 0 4% 0;
+    min-height: 200px;
+    position: relative;
+    padding: 0; }
+    #members div img {
+      width: 100%; }
+  #members div:nth-child(odd) {
+    float: right;
+    clear: right; }
+
+@-webkit-keyframes STAR-MOVE {
+  from {
+    background-position: 0% 100%; }
+
+  to {
+    background-position: 0% 2000%; } }

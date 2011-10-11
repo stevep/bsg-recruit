@@ -1,0 +1,158 @@
+@font-face 
+  font-family: battlestar  
+  src: url( ../fonts/battlestar.ttf ) format("truetype") 
+
+$politics: rgba(196, 183, 87, .9)
+$leadership: rgba(0, 160, 93, .9)
+$tactics: rgba(104, 68, 128, .9)
+$piloting: rgba(220, 73, 70, .9)
+$engineering: rgba(25, 122, 170, .9)
+
+
+html
+  background: url("../images/star-texture.jpg")
+  -webkit-animation-name: STAR-MOVE
+  -webkit-animation-duration: 200s
+  -webkit-animation-timing-function: linear
+  -webkit-animation-iteration-count: infinite
+
+body
+  width: 800px
+  margin: 20px auto
+  color: #aaa
+  font-family: sans-serif
+
+h1
+  padding: 10px 0 0
+  margin: 0 auto
+  font-size: 50px
+  font-family: battlestar
+  color: #aaa
+  text-align: center
+  line-height: 70px
+  width: 450px
+  position: relative
+  
+  
+  strong
+    color: rgb(202, 203, 195)
+    text-shadow: 0em 0em 0.09em #f00
+  #logo
+    width: 450px
+
+h2
+  font-size: 24px
+  font-weight: normal
+  text-transform: uppercase
+  border-bottom: 1px solid #aaa
+  width: 48%
+
+#stats
+  overflow: hidden
+  position: relative
+  .crew
+    height: 144px
+  ol
+    line-height: 1.5em
+    li:first-of-type
+      font-weight: bold
+      color: #fff
+      text-shadow: 0em 0em 0.5em #fff
+  h3
+    font-weight: bold
+    border-bottom: 1px solid #aaa
+    width: 200px
+    padding-bottom: 3px
+    margin-bottom: 10px
+    text-transform: uppercase
+    font-size: 14px
+  
+#skills
+  float: right
+  list-style: none
+  position: absolute
+  width: 490px
+  bottom: 0
+  right: 0
+  li
+    float: left
+    margin-left: 20px
+    width: 80px
+    text-align: center
+    position: relative
+    height: 340px
+    div
+      background: #ccc
+      position: absolute
+      bottom: 4px
+      width: 80px
+      border: 1px solid #aaa
+    label
+      position: absolute
+      bottom: -20px
+      display: block
+      width: 120px
+      left: -20px
+      font-size: 14px
+      font-weight: bold
+      text-transform: capitalize
+    span
+      margin-top: -35px
+      display: block
+      font-size: 24px
+  li:first-child
+    margin-left: 0
+  .politics
+    color: $politics * 1.5
+    div
+      background-color: $politics  
+      border-color: $politics * 1.5
+  .leadership
+    color: $leadership * 1.5
+    div
+      background-color: $leadership
+      border-color: $leadership * 1.5
+  .tactics
+    color: $tactics * 1.5
+    div
+      background: $tactics
+      border-color: $tactics * 1.5
+  .piloting
+    color: $piloting * 1.5
+    div
+      background: $piloting
+      border-color: $piloting * 1.5
+  .engineering
+    color: $engineering * 1.5
+    div
+      background: $engineering
+      border-color: $engineering * 1.5
+
+#members
+  text-align: center
+  margin-top: 20px
+  select
+    font-size: 24px
+  ul
+    list-style: none
+    li
+      display: inline
+  div
+    width: 48%
+    clear: both
+    float: left
+    margin: 0 0 4% 0
+    min-height: 200px
+    position: relative
+    padding: 0
+    img
+      width: 100%
+  div:nth-child(odd)
+    float: right
+    clear: right
+
+@-webkit-keyframes STAR-MOVE
+  from
+    background-position: 0% 100%
+  to
+    background-position: 0% 2000%

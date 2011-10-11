@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../vendor/jasmine-1.1.0/jasmine_favicon.png" />
+    <title>App Tests</title>
+    <link rel="stylesheet" href="../vendor/jasmine-1.1.0/jasmine.css">
+
+    <script src="../vendor/jquery-1.6.4.min.js"></script>
+    <script src="../vendor/underscore-1.1.7/underscore.js"></script>
+    <script src="../vendor/backbone-0.5.3/backbone.js"></script>
+    
+    <script src="../vendor/jasmine-1.1.0/jasmine.js"></script>
+    <script src="../vendor/jasmine-1.1.0/jasmine-html.js"></script>
+
+    <script src="../public/js/app.js"></script>
+    <script src="fixtures.js"></script>
+    <script src="spec.js"></script>
+  </head>
+
+  <body id="suite">
+    <script>
+      jQuery(function($){
+        jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+        jasmine.getEnv().execute();
+      });
+      
+    </script>
+    
+    <script type="text/template" id="crew-member-template">
+      <li>
+        <select name="crew-member-<%= slot %>">
+         
+        </select>
+      </li>
+    </script>
+  </body>
+</html>
