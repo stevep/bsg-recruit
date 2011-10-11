@@ -1,7 +1,7 @@
 BSG - Recruit
 =============
 
-Use this tool to analyze the make up of your BSG The Board Game team.
+Use this tool to analyze the make up of your BSG The Board Game crew.
 
 Features:
 --------
